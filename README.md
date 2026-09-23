@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="YouDrop" width="180">
+<img src="assets/logo.png" alt="YouDrop: a cow dropping YouTube videos" width="210">
 
 # YouDrop
 
