@@ -113,7 +113,7 @@ cd youdrop
 `setup.sh` is idempotent — safe to re-run. It:
 
 - mints a 256-bit token at `~/.youtube-airdrop-token` (mode `600`)
-- installs a launch agent at `~/Library/LaunchAgents/com.yoav.youtube-airdrop.plist`
+- installs a launch agent at `~/Library/LaunchAgents/com.youdrop.helper.plist`
 - starts the helper on `127.0.0.1:7337` and confirms it's healthy
 - prints your token and the next steps
 
@@ -185,7 +185,7 @@ discovers devices live each time; it doesn't remember them between sends.
 
 ```bash
 npm run health                       # expect {"ok":true,...}
-launchctl kickstart -k "gui/$(id -u)/com.yoav.youtube-airdrop"
+launchctl kickstart -k "gui/$(id -u)/com.youdrop.helper"
 npm run logs                         # tail today's JSON log
 ```
 </details>
@@ -218,8 +218,7 @@ usual cause. If it persists, open the service worker console from that page and 
 <summary><b>The picker vanishes when I click someone</b></summary>
 
 That was a real bug, fixed: the helper now pumps an `NSRunLoop` while the picker is up
-instead of blocking on `delay`. Make sure you're on the current version — see
-`bugfix.md` for the full story.
+instead of blocking on `delay`. Make sure you're on the current version.
 </details>
 
 ---
@@ -271,7 +270,7 @@ tests/manual/send-test.sh  # one real send — opens a picker
 After changing anything in `helper/`, restart the agent:
 
 ```bash
-launchctl kickstart -k "gui/$(id -u)/com.yoav.youtube-airdrop"
+launchctl kickstart -k "gui/$(id -u)/com.youdrop.helper"
 ```
 
 After changing anything in `extension/`, hit the ⟳ icon on `chrome://extensions`.
@@ -301,17 +300,9 @@ your click.
 ## Uninstall
 
 ```bash
-launchctl bootout "gui/$(id -u)/com.yoav.youtube-airdrop"
-rm ~/Library/LaunchAgents/com.yoav.youtube-airdrop.plist
+launchctl bootout "gui/$(id -u)/com.youdrop.helper"
+rm ~/Library/LaunchAgents/com.youdrop.helper.plist
 rm ~/.youtube-airdrop-token
 ```
 
 Then remove the extension from `chrome://extensions`.
-
----
-
-## Further reading
-
-- [`bugfix.md`](bugfix.md) — every bug that came up while building this, what caused it, and
-  how it was fixed. The two worth reading are the run loop that made the picker uncloseable,
-  and the `readyState` guard that silently dropped the timestamp.

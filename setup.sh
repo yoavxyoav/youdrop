@@ -5,7 +5,7 @@ set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TOKEN_FILE="$HOME/.youtube-airdrop-token"
-LABEL="com.yoav.youtube-airdrop"
+LABEL="com.youdrop.helper"
 PLIST="$HOME/Library/LaunchAgents/$LABEL.plist"
 NODE_BIN="$(command -v node || true)"
 

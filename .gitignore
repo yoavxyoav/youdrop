@@ -14,7 +14,4 @@ npm-debug.log*
 .youtube-airdrop-token
 
 # Personal working notes — kept locally, deliberately not published
-prompts.txt
-FORYOAV.md
-projectplan.md
-research.md
+notes/
