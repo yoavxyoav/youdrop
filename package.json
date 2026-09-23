@@ -1,0 +1,17 @@
+{
+  "name": "youdrop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AirDrop the YouTube moment you are watching, from Chrome to your phone.",
+  "scripts": {
+    "start": "node helper/server.js",
+    "icons": "node tools/make-icons.js",
+    "health": "curl -fsS http://127.0.0.1:7337/health && echo",
+    "logs": "tail -f logs/helper-$(date +%F).log",
+    "test": "node --test $(find tests/unit -name \"*.test.js\")",
+    "test:integration": "node --test $(find tests/integration -name \"*.test.js\")"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,18 @@
+# Runtime logs
+logs/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# Never commit the shared token. It lives in ~/.youtube-airdrop-token, outside the repo,
+# but this guards against anyone copying it in.
+*.token
+.youtube-airdrop-token
+
+# Personal working notes — kept locally, deliberately not published
+prompts.txt
+FORYOAV.md
