@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="YouDrop: a cow dropping YouTube videos">
+  <!-- No <style> block on purpose: CSS rules beat presentation attributes, which silently overrode fill="none" on the outlines and filled the whole cow in. -->
+  <g stroke="#14161b" stroke-width="13" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- tail (behind the body) -->
+    <path d="M110 148 C 76 166, 68 212, 76 244" fill="none"/>
+    <circle cx="74" cy="262" r="19" fill="#14161b"/>
+
+    <!-- legs -->
+    <g fill="#fdfdfb">
+      <rect x="136" y="216" width="30" height="82" rx="14"/>
+      <rect x="188" y="222" width="30" height="76" rx="14"/>
+      <rect x="264" y="222" width="30" height="76" rx="14"/>
+      <rect x="310" y="216" width="30" height="82" rx="14"/>
+    </g>
+    <g fill="#14161b" stroke="none">
+      <path d="M137 284 h28 v12 a14 14 0 0 1 -28 0 Z"/>
+      <path d="M189 284 h28 v12 a14 14 0 0 1 -28 0 Z"/>
+      <path d="M265 284 h28 v12 a14 14 0 0 1 -28 0 Z"/>
+      <path d="M311 284 h28 v12 a14 14 0 0 1 -28 0 Z"/>
+    </g>
+
+    <!-- udder -->
+    <ellipse cx="208" cy="244" rx="30" ry="21" fill="#ffc9d1" stroke-width="11"/>
+
+    <!-- barrel -->
+    <path d="M112 172 c 0 -36, 32 -58, 80 -58 h 66 c 48 0, 80 22, 80 58 c 0 38, -32 60, -80 60 h -66 c -48 0, -80 -22, -80 -60 Z" fill="#fdfdfb"/>
+
+    <!-- markings -->
+    <g fill="#14161b" stroke="none">
+      <path d="M158 140 c 26 -12, 52 -1, 54 19 c 2 20, -20 34, -44 30 c -24 -4, -36 -22, -30 -38 c 3 -8, 11 -8, 20 -11 Z"/>
+      <path d="M248 186 c 22 -6, 40 5, 38 21 c -2 16, -22 24, -40 19 c -18 -6, -24 -22, -15 -31 c 4 -5, 10 -7, 17 -9 Z"/>
+    </g>
+
+    <!-- ears, drawn before the head so they tuck behind it -->
+    <ellipse cx="336" cy="170" rx="28" ry="16" transform="rotate(-20 336 170)" fill="#fdfdfb" stroke-width="12"/>
+    <ellipse cx="462" cy="170" rx="28" ry="16" transform="rotate(20 462 170)" fill="#fdfdfb" stroke-width="12"/>
+
+    <!-- horns: solid and tapered, not round capped strokes, which read as antennae -->
+    <path d="M368 124 c -6 -20, -20 -32, -34 -32 c 8 8, 14 22, 16 38 Z" fill="#14161b" stroke-width="10"/>
+    <path d="M430 124 c 6 -20, 20 -32, 34 -32 c -8 8, -14 22, -16 38 Z" fill="#14161b" stroke-width="10"/>
+
+    <!-- head -->
+    <path d="M344 164 c 0 -28, 24 -46, 55 -46 c 31 0, 55 18, 55 46 v 22 c 0 30, -25 50, -55 50 c -30 0, -55 -20, -55 -50 Z" fill="#fdfdfb"/>
+
+    <!-- muzzle -->
+    <rect x="362" y="188" width="74" height="50" rx="24" fill="#ffffff" stroke-width="12"/>
+    <g fill="#14161b" stroke="none">
+      <ellipse cx="384" cy="211" rx="7" ry="9"/>
+      <ellipse cx="414" cy="211" rx="7" ry="9"/>
+    </g>
+
+    <!-- eye -->
+    <circle cx="378" cy="166" r="9" fill="#14161b" stroke="none"/>
+    <circle cx="420" cy="166" r="9" fill="#14161b" stroke="none"/>
+  </g>
+
+  <!-- ===== the drops: teardrops that are also YouTube videos ===== -->
+  <g stroke="#14161b" stroke-linejoin="round">
+    <g transform="translate(152,366)">
+      <path d="M0 -48 C 22 -16, 40 6, 40 26 A 40 40 0 1 1 -40 26 C -40 6, -22 -16, 0 -48 Z" fill="#ff223d" stroke-width="13"/>
+      <path d="M-13 8 L 22 26 L -13 44 Z" fill="#ffffff" stroke="none"/>
+    </g>
+    <g transform="translate(244,428) scale(0.7)">
+      <path d="M0 -48 C 22 -16, 40 6, 40 26 A 40 40 0 1 1 -40 26 C -40 6, -22 -16, 0 -48 Z" fill="#ff223d" stroke-width="18"/>
+      <path d="M-13 8 L 22 26 L -13 44 Z" fill="#ffffff" stroke="none"/>
+    </g>
+    <g transform="translate(318,472) scale(0.46)">
+      <path d="M0 -48 C 22 -16, 40 6, 40 26 A 40 40 0 1 1 -40 26 C -40 6, -22 -16, 0 -48 Z" fill="#ff223d" stroke-width="27"/>
+      <path d="M-13 8 L 22 26 L -13 44 Z" fill="#ffffff" stroke="none"/>
+    </g>
+  </g>
+</svg>

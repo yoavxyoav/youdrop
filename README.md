@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/logo.svg" alt="YouDrop" width="180">
+
 # YouDrop
 
 **AirDrop the YouTube moment you're watching — straight from Chrome to your phone.**
@@ -18,11 +20,14 @@ The YouTube app opens at *that second*.
 
 ## What it does
 
-You're watching a 40-minute talk on your Mac. At 18:42 someone says the thing you wanted
-your friend to hear. Today you'd copy the URL, fumble with "copy link at current time",
-paste it into Messages, and hope.
+You're halfway through a 40-minute talk at your desk and you have to leave — commute,
+gym, walk, school run. You want the rest of it on your phone, resuming exactly where you
+stopped, not from the beginning.
 
-With YouDrop: `⌘⇧Y` → click your phone → done. The link carries the timestamp.
+Today that means copying the URL, hunting for "copy link at current time", pasting it into
+a message to yourself, and finding it again on the phone.
+
+With YouDrop: `⌘⇧Y` → tap your phone → it's waiting for you, at the right second.
 
 ```
           Chrome (any YouTube page)
@@ -307,6 +312,6 @@ Then remove the extension from `chrome://extensions`.
 
 ## Further reading
 
-- [`research.md`](research.md) — the measurements behind the Web Share API and accessibility
-  findings above
-- [`bugfix.md`](bugfix.md) — every bug, what caused it, and how it was fixed
+- [`bugfix.md`](bugfix.md) — every bug that came up while building this, what caused it, and
+  how it was fixed. The two worth reading are the run loop that made the picker uncloseable,
+  and the `readyState` guard that silently dropped the timestamp.
